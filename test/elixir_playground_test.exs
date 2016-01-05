@@ -2,6 +2,7 @@ defmodule ElixirPlaygroundTest do
   use ExUnit.Case
   doctest ElixirPlayground
   import Spring
+  import :math
 
   test "I can create functions" do
     assert ElixirPlayground.sum(1,2) == 3
@@ -19,5 +20,9 @@ defmodule ElixirPlaygroundTest do
 
   test "I can use imported functions from other modules" do
     assert say_somethng() == "Somethng!"
+  end
+
+  test "I can use the imported function of an elixir module" do
+    assert sin(0) == 0
   end
 end
