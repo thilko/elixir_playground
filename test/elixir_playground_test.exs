@@ -25,4 +25,12 @@ defmodule ElixirPlaygroundTest do
   test "I can use the imported function of an elixir module" do
     assert sin(0) == 0
   end
+
+  test "I can use default arguments" do
+    assert default_arg == 43
+  end
+
+  def default_arg(arg \\ 42) do
+    arg + 1
+  end
 end
