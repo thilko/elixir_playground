@@ -30,7 +30,7 @@ defmodule ElixirPlaygroundTest do
     assert default_arg == 43
   end
 
-  def default_arg(arg \\ 42) do
+  def default_arg(arg \\ 42, arg1 \\ 100) do
     arg + 1
   end
 end
