@@ -27,10 +27,11 @@ defmodule ElixirPlaygroundTest do
   end
 
   test "I can use default arguments" do
-    assert default_arg == 43
+    assert default_arg == 143
+    assert default_arg(1) == 102
   end
 
   def default_arg(arg \\ 42, arg1 \\ 100) do
-    arg + 1
+    arg + 1 + arg1
   end
 end
