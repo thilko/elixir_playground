@@ -25,4 +25,16 @@ defmodule GeomTest do
     assert Geom.area(:triangle, 3,5) == 7.5
     assert Geom.area(:ellipse, 2,4) == 25.132741228718345
   end
+
+  @doc " Etude 3-2"
+  test "using guards to avoid negative values" do
+    assert_raise FunctionClauseError, fn -> Geom.area(:rectangle, -3,4) end
+    assert_raise FunctionClauseError, fn -> Geom.area(:triangle, -3,5) end
+    assert_raise FunctionClauseError, fn -> Geom.area(:ellipse, -2,4) end
+  end
+
+  @doc " Etude 3-3"
+  test "use _ to create a catch-all" do
+    assert Geom.area(:nubs, 2, 4) == 42
+  end
 end
