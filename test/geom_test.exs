@@ -51,4 +51,11 @@ defmodule GeomTest do
     assert_raise FunctionClauseError, fn -> Geom.area2(:triangle, -3, 5) end
     assert_raise FunctionClauseError, fn -> Geom.area2(:triangle, 3, -5) end
   end
+
+  @doc " Etude 4-2"
+  test "calculating greatest common divisor" do
+    assert Geom.gcd(2,8) == 2
+    assert Geom.gcd2(2,8) == 2
+
+  end
 end

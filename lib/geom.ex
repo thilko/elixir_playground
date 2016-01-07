@@ -41,4 +41,24 @@ defmodule Geom do
       :ellipse -> param1 * param2 * :math.pi()
     end
   end
+
+  def gcd(m, n) do
+    cond do
+      m == n -> m
+      m > n -> gcd(m-n, n)
+      m < n -> gcd(m, n-m)
+    end
+  end
+
+  def gcd2(m, n) when m > n do
+    gcd(m-n, n)
+  end
+
+  def gcd2(m, n) when m < n do
+    gcd(m, n-m)
+  end
+
+  def gcd2(m, n) when m == n do
+    m
+  end
 end
