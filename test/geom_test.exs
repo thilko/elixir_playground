@@ -37,4 +37,9 @@ defmodule GeomTest do
   test "use _ to create a catch-all" do
     assert Geom.area(:nubs, 2, 4) == 42
   end
+
+  @doc " Etude 3-4"
+  test "use tuples as parameters" do
+    assert Geom.area({:rectangle, 7, 3}) == 21
+  end
 end

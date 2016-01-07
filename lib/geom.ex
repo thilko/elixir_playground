@@ -26,6 +26,10 @@ defmodule Geom do
     42
   end
 
+  def area({shape, param1, param2}) do
+    area(shape, param1, param2)
+  end
+
   def sum( a \\ 3, b, c \\ 7) do
     a + b + c
   end
