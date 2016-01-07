@@ -33,4 +33,12 @@ defmodule Geom do
   def sum( a \\ 3, b, c \\ 7) do
     a + b + c
   end
+
+  def area2(shape, param1, param2) when param1 > 0 and param2 > 0 do
+    case shape do
+      :rectangle -> param1 * param2
+      :triangle -> param1 * param2 / 2
+      :ellipse -> param1 * param2 * :math.pi()
+    end
+  end
 end

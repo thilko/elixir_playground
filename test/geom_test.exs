@@ -42,4 +42,13 @@ defmodule GeomTest do
   test "use tuples as parameters" do
     assert Geom.area({:rectangle, 7, 3}) == 21
   end
+
+  @doc " Etude 4-1"
+  test "use case" do
+    assert Geom.area2(:rectangle, 3, 5) == 15
+    assert Geom.area2(:triangle, 3, 5) == 7.5
+    assert Geom.area2(:ellipse, 2,4) == 25.132741228718345
+    assert_raise FunctionClauseError, fn -> Geom.area2(:triangle, -3, 5) end
+    assert_raise FunctionClauseError, fn -> Geom.area2(:triangle, 3, -5) end
+  end
 end
