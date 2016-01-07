@@ -34,4 +34,5 @@ defmodule ElixirPlaygroundTest do
   def default_arg(arg \\ 42, arg1 \\ 100) do
     arg + 1 + arg1
   end
+
 end
