@@ -7,4 +7,8 @@ defmodule PowersTest do
     assert Powers.raise(2,0) == 1
     assert Powers.raise(2,-3) == 0.125
   end
+
+  test "calculate the nth root" do
+    assert Powers.nth_root(27,3) == 3.0
+  end
 end
