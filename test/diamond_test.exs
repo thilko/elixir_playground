@@ -42,9 +42,7 @@ defmodule DiamondTest do
   end
 
   def half(diamond_letter) do
-      start = int_codepoint("A")
-      diamond = int_codepoint(diamond_letter)
-      the_list = Enum.to_list((start..diamond))
+      the_list = Enum.to_list((int_codepoint("A")..int_codepoint(diamond_letter)))
       Enum.map(the_list, &(line_for(<<&1 :: utf8>>, diamond_letter)))
   end
 
@@ -72,8 +70,8 @@ defmodule DiamondTest do
   end
 
   def middle_blanks(letter) do
-    <<start, 0>> = "A" <> <<0>>
-    <<current, 0>> = letter <> <<0>>
+    start = int_codepoint("A")
+    current = int_codepoint(letter)
     blank((current - start) * 2 - 1)
   end
 
