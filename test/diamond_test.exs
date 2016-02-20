@@ -36,9 +36,9 @@ defmodule DiamondTest do
   end
 
   def diamond(letter) do
-    top = half(letter)
-    down = List.delete_at(Enum.reverse(half(letter)),0)
-    Enum.join(top ++ down, "\n")
+    upper_part = half(letter)
+    lower_part = List.delete_at(Enum.reverse(half(letter)),0)
+    Enum.join(upper_part ++ lower_part, "\n")
   end
 
   def half(diamond_letter) do
@@ -75,8 +75,8 @@ defmodule DiamondTest do
     blank((current - start) * 2 - 1)
   end
 
-  def blank(b) do
-    String.duplicate(" ", b)
+  def blank(number) do
+    String.duplicate(" ", number)
   end
 
   defp tip(diamond_letter) do
